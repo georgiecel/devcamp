@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri:400,600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 40rem;
+    padding-bottom: 2vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.body-table {
+    max-width: 90rem;
+    padding: 0 2vw;
+}
+
+.hide-screen {
+    display: none;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+a {
+    color: #2a53c9;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #516ab3;
+    text-decoration: underline;
+}
+
+h2 {
+    margin-bottom: 0.75rem;
+}
+
+h2 + p {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.c-location {
+    font-size: 1.15rem;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    font-weight: 700;
+}
+
+th,
+td {
+    border-bottom: 2px solid #ddd;
+    padding: 1.25rem 0.75rem;
+    vertical-align: top;
+}
+
+th:first-child:not(:only-child),
+td:first-child:not(:only-child) {
+    padding-left: 0;
+}
+  
+td p:last-child {
+    margin-bottom: 0;
+}
+
+.c-sub-row td {
+    background-color: #e2eaf8;
+}
+
+.c-row-break td {
+    background-color: #e6f8e9;
+}
+
+.c-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+h3,
+.c-title {
+    font-size: 1rem;
+    margin-bottom: 0.45rem;
+    margin-top: 0;
+    font-weight: 700;
+}
+    
+.c-title:only-child {
+    margin-bottom: 0;
+}
+
+.c-name {
+    color: #555;
+    font-size: 0.9rem;
+    margin-top: 0;
+    line-height: initial;
+}
+
+.c-name:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 50rem) {
+    body {
+        margin: 0;
+    }
+    
+    h1 {
+        font-size: 1.2rem;
+    }
+    
+    h2,
+    .c-location {
+        font-size: 1rem;
+    }
+    
+    h2 + p,
+    p {
+        font-size: 0.9rem;
+    }
+    
+    .body-table {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .body-table .c-name {
+        font-size: 0.8rem;
+    }
+    
+    .body-table p {
+        font-size: 0.9rem;
+    }
+  
+    table {
+        table-layout: fixed;
+    }
+ 
+    th:first-child:not(:only-child),
+    td:first-child:not(:only-child) {
+        padding-left: 1rem;
+    }
+ 
+    thead,
+    th:last-child,
+    td:last-child {
+        display: none;
+    }
+  
+    td:only-child {
+        display: block;
+    }
+  
+    tr:not(.c-row--two-stream) > td + td {
+        padding-bottom: 0;
+    }
+    
+    .c-row.c-row--two-stream td:first-child:not(:only-child) {
+        padding-bottom: 2rem;
+    }
+  
+    .c-row.c-row--two-stream td:nth-child(1) {
+        order: 2;
+    }
+  
+    .c-row.c-row--two-stream td:nth-child(2) {
+        order: 1;
+    }
+  
+    .c-row.c-row--two-stream td:nth-child(3) {
+        order: 3;
+    }
+  
+    .c-row.c-row--two-stream > td:first-child + td {
+        padding-top: 0;
+    }
+  
+    .c-row.c-row--two-stream > td + td + td {
+        padding-bottom: 0;
+    }
+ 
+    tr {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+  
+    th,
+    td {
+        border-bottom: 0;
+        line-height: 1.4;
+        padding: 1rem;
+        text-align: left;
+        width: 100%;
+    }
+  
+    tr::before {
+        background-color: #ddd;
+        content: '';
+        display: block;
+        height: 2px;
+        width: 100%;
+    }
+  
+    tr:nth-child(even) {
+        background-color: #f3f3f3;
+    }
+    
+    .c-heading {
+        margin: 0;
+    }
+    
+    .c-name {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media print {
+    html {
+        font-size: 12px;
+        padding: 0;
+    }
+    
+    body {
+        padding: 0;
+    }
+    
+    .c-heading {
+        margin: 0;
+    }
+    
+    h3,
+    .c-title {
+        font-size: 13px;
+    }
+    
+    .hide-screen {
+        display: table-row;
+    }
+    
+    .hide-screen h1,
+    .hide-screen .c-end-note {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    /*tbody::after {*/
+    /*    content: '';*/
+    /*    display: block;*/
+    /*    page-break-after: always;*/
+    /*    page-break-inside: avoid;*/
+    /*    page-break-before: avoid;        */
+    /*}*/
+    
+    tbody .c-main-row {
+        margin-top: 24px;
+    }
+    
+    th, td {
+        border-bottom-width: 0;
+        padding-bottom: 14px;
+        padding-top: 14px;
+    }
+    
+    .hide-print,
+    .c-sub-row {
+        display: none;
+    }
+    
+    .c-main-row {
+        background-color: #e2eaf8;
+    }
+    
+    .c-title {
+        margin-bottom: 0;
+    }
+    
+    .c-name {
+        margin-bottom: 0;
+    }
+    
+    .c-title + .c-name {
+        margin-top: 8px;
+    }
+    
+    .hide-print-description {
+        display: none;
+    }
+}
