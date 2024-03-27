@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.devcamp {
+    --devcamp: 1;
+}
+
 html {
     font-family: 'Hind Siliguri', sans-serif;
     font-size: 1.25rem;
