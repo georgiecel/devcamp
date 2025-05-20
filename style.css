@@ -24,7 +24,7 @@ body {
 
 .body-table {
     max-width: 90rem;
-    padding: 0 2vw;
+    padding: 0 1vw;
 }
 
 .hide-screen {
@@ -45,6 +45,11 @@ a {
 a:hover {
     color: #516ab3;
     text-decoration: underline;
+}
+
+ul {
+    padding-left: 1rem;
+    list-style: square;
 }
 
 h2 {
@@ -78,10 +83,11 @@ td {
 
 th:first-child:not(:only-child),
 td:first-child:not(:only-child) {
-    padding-left: 0;
+    padding-left: 1rem;
 }
   
-td p:last-child {
+td p:last-child,
+td > ul:last-child {
     margin-bottom: 0;
 }
 
@@ -95,6 +101,10 @@ td p:last-child {
 
 .c-row-break td {
     background-color: #e6f8e9;
+}
+
+.c-row-dinner-break td {
+    background-color: #ffece4;
 }
 
 .c-heading {
@@ -153,19 +163,15 @@ h3,
         font-size: 0.8rem;
     }
     
-    .body-table p {
+    .body-table p,
+    .body-table ul {
         font-size: 0.9rem;
     }
   
     table {
         table-layout: fixed;
     }
- 
-    th:first-child:not(:only-child),
-    td:first-child:not(:only-child) {
-        padding-left: 1rem;
-    }
- 
+
     thead,
     th:last-child,
     td:last-child {
