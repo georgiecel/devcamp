@@ -2,7 +2,7 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-Redirect /schedule2025 schedule.html
+Redirect /schedule2025.html /schedule.html
 
 <Files 403.shtml>
 order allow,deny
