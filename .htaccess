@@ -2,8 +2,6 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-Redirect 301 /schedule2025.html /schedule.html
-
 <Files 403.shtml>
 order allow,deny
 allow from all
